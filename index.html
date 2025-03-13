@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--[SEO optiomization section]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Brian's Tree Care & Cabins </title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script> 
+
+    <!--[SEO optiomization section]-->
+    <meta title="SEO" description="Search Engine Wording">
+
+     <!--[SEO optiomization section]-->
+</head>
+<body>
+    <nav class="navbar">
+        <img src="Tmlogo.png" alt="TM-logo" style="filter: none; ">
+        <ul>          
+            <li><a href="transport.html"><i class="fas fa-shipping-fast"  style="color: #deeaf2;"></i> Transport</a></li>
+            <li><a href="#services"><i class="fas fa-clone" style="color:  #deeaf2;"></i> Services</a></li>
+            
+            <li><a href="#location"><i class="fa-solid fa-location-dot" style="color: #deeaf2;"></i> Location</a></li>
+           
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div class="menu" id="menu">
+        <ul class="mobiles">        
+            <a href="transport.html"><i class="fas fa-shipping-fast" style="color:#deeaf2;"></i> Transport</a></li>
+            <a href="#services"><i class="fas fa-box" style="color:#deeaf2;"></i> Services</a></li>
+            
+            <a href="#location"><i class="fa-solid fa-location-dot" style="color:#deeaf2;"></i> Location</a></li>
+       
+        </ul>
+    </div>
+
+    <style>
+        
+
+        .header-container {
+            min-height: 75vh;
+            background: linear-gradient(rgba(1, 16, 40, 0.779), rgba(0, 0, 0, 0.5)),
+                        url(cut.jpeg);
+            background-size: cover;
+            background-position: center;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .slides-container {
+           
+            width: 100%;
+            max-width: 1200px;
+            margin: 2px auto;
+            padding: 2rem;
+            position:relative;
+           
+            padding-bottom: 80px;
+        }
+
+        .slide {
+            position: absolute;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 800px;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+        }
+
+        .slide h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: #5a9fd0;
+        }
+
+        .slide p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .indicators-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .indicators {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .indicator {
+            width: 40px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #396280;
+            width: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+                align-items: flex-start;
+            }
+
+            .slides-container {
+                padding: 1rem;
+                margin-top:  20vh;
+            }
+
+            .slide h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .slide p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .indicator {
+                width: 30px;
+                height: 3px;
+            }
+
+            .indicator.active {
+                width: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide h1 {
+                font-size: 1.8rem;
+            }
+
+            .slide p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+<header class="header-container">
+  <div class="slides-container">
+      <!-- Slide 1 -->
+      <div class="slide active">
+          <h1>Expert & Reliable <span class="highlight">Tree Care Services</span></h1>
+          <p>From professional tree felling to precise trimming, we ensure your outdoor space remains safe and beautiful.</p>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="slide">
+          <h1><span class="highlight">Quality Wendy Houses</span> Built to Last</h1>
+          <p>Our handcrafted Wendy houses provide the perfect space for relaxation, storage, home offices, schools, and more.</p>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="slide">
+          <h1>Safe, Efficient & <span class="highlight">Affordable Tree Services</span></h1>
+          <p>Trust us for professional tree pruning, trimming, and removal, ensuring your property stays clean and hazard-free.</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide">
+          <h1>Durable <span class="highlight">Cabins & Wendy Houses</span></h1>
+          <p>We design and build high-quality Wendy houses tailored to your needs, from cozy retreats to functional workspaces.</p>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide">
+          <h1>Eco-Friendly <span class="highlight">Stump Removal & Cleanup</span></h1>
+          <p>Our stump removal and site cleanup services ensure a neat and well-maintained landscape.</p>
+      </div>
+
+
+    
+            <!-- Indicators Container -->
+            <div class="indicators-container">
+                <div class="indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        function showSlide(n) {
+            // Remove active classes
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Update current slide
+            currentSlide = (n + slides.length) % slides.length;
+            
+            // Add active classes
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Indicator click handlers
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(index);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+    </script>
+</div>
+
+
+
+
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1, h2, h3, h4, h5 {
+      margin: 0;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 30px 20px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Showcase Section */
+    #showcase h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #showcase h1 span {
+      color:  #396280;
+      font-size: 30px;
+      font-family:'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    /* Image Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    
+    }
+
+    .grid img {
+        border: solid 2px #166eac86;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      max-width: 80%;
+      margin: auto;
+     
+    }
+
+    .modal img {
+      width: 100%;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      background-color: black;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .modal-content {
+        max-width: 90%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+<div class="lining">
+  <div class="marquee-container">
+      <div class="marquee">
+          Tree Trimming • Tree Removal • Hedge Trimming • Hedge Trimming • Log Cabins •
+      </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content" style="margin-top: -1vh;">
+
+  <!-- Showcase Section -->
+  <section id="showcase">
+    <div class="section-header">
+      
+       <h1> <span>Brian's Tree Care & Cabins</span> <span style="color: black; font-size: 16px;"></span></h1>
+      <hr style="width:90px;border:5px solid  #396280;" class="w3-round">
+    </div>
+    <div class="grid">
+      <img src="cabin1.jpeg" alt="logistic5" onclick="openModal(this)">
+      <img src="cabin2.jpeg" alt="Logistic4" onclick="openModal(this)">
+        <img src="cabin4.jpeg" alt="logistic3" onclick="openModal(this)">
+      <img src="tree1.jpeg" alt="logistic" onclick="openModal(this)">
+   </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-header"></br>
+      <h1><span>Our</span> <span style="color: #396280;"> Services</span></h1></br>
+      <hr style="width:75px;border:5px solid #396280;" class="w3-round">
+    </div>
+
+
+
+  </section>
+
+
+  <div class="lining">
+    <div class="marquee-container">
+        <div class="marquee">
+            Tree Trimming • Tree Removal • Hedge Trimming • Hedge Trimming • Log Cabins •
+        </div>
+    </div>
+  </div>
+  
+
+    <style>
+
+
+        .services-container {
+            display: grid;
+            grid-template-columns: 2fr;
+            gap: 10px;
+            padding: 10px;
+            max-width: 1350px;
+            margin: auto;
+        }
+      
+        .service {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 50px;
+           
+            box-shadow: 0 4px 10px rgba(154, 154, 154, 0.126);
+            border-radius: 3px;
+            position: relative;
+            line-height: 1.9;
+        }
+      
+        .service i {
+            font-size: 30px;
+            margin-right: 15px;
+            color: #396280;
+        }
+      
+        .service {
+          font-size: 22px;
+          padding: 15px 22px;
+            border-radius: 4px;
+        }
+        .tm-role{
+          font-size: 28px;
+          padding: 10px 20px;
+          color: #396280;
+        }
+        .service p {
+            font-size: 17px;
+            color:#1a2b39d5;
+            margin-top: 10px;
+        }
+      
+        .highlight {
+            color: #396280;
+            font-weight: bold;
+        }
+      
+        .service::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: #396280;
+            margin-top: 15px;
+            border-radius: 3px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      
+        /* Responsive for Medium Devices */
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+      
+        /* Responsive for Small Devices */
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+      
+            .service i {
+                font-size: 30px;
+            }
+        }
+      
+        /* Large Devices for 3x3 Layout */
+        @media (min-width: 1200px) {
+            .services-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+            }
+      
+            .service {
+                padding: 25px;
+                font-size: 18px;
+            }
+      
+            .service i {
+                font-size: 40px;
+            }
+        }
+      </style>
+      
+      <div class="services-container">
+        <div class="service">
+            <i class="fas fa-tree"></i>
+            <span class="tm-role">Expert Tree Felling</span>
+            <p>Our team specializes in <span class="highlight">safe and professional tree felling</span>, ensuring hazardous or unwanted trees are removed efficiently. We handle every job with precision to keep your property safe and looking its best.</p>
+        </div>
+    
+        <div class="service">
+            <i class="fas fa-cut"></i>
+            <span class="tm-role">Tree Trimming & Pruning</span>
+            <p>We provide <span class="highlight">expert trimming and pruning</span> to promote healthy tree growth and enhance the beauty of your landscape. Our careful approach ensures your trees stay strong, vibrant, and well-maintained.</p>
+        </div>
+    
+        <div class="service">
+            <i class="fas fa-house-user"></i>
+            <span class="tm-role">Custom Wendy Houses</span>
+            <p>Our <span class="highlight">durable and stylish Wendy houses</span> are perfect for relaxation, storage, home offices, schools, and sheds. Built with quality materials, they provide a cozy and functional space tailored to your needs.</p>
+        </div>
+    
+        <div class="service">
+            <i class="fas fa-recycle"></i>
+            <span class="tm-role">Stump Removal & Site Cleanup</span>
+            <p>We offer <span class="highlight">efficient stump removal</span> to clear your property of unwanted stumps and debris. Our cleanup services ensure a neat and tidy landscape, ready for your next outdoor project.</p>
+        </div>
+    </div>
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+      <div class="contain">
+
+        <div class="grid">
+        
+            <!-- About Us Section -->
+            <div  class="section">
+                <div class="emoji"> <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h2><span>Smart</span> Loans for Your Financial Freedom</h2>
+                        <p>Our flexible loan options allow you to manage your finances better and unlock the freedom to live your life on your terms.</p>
+        </div>
+        
+           <style>
+            .emoji{
+                color: #f2dfdf; 
+            }
+           </style>
+        
+            <!-- Section 5 -->
+            <div class="section">
+                <div class="emoji"><i class="fas fa-calculator"></i>
+                </div>
+                <h2><span>Expert</span> Financial Planning Services</h2>
+                <p>Work with our expert advisors to create a financial plan that aligns with your goals, whether for retirement, growth, or saving.</p>
+        </div>
+        
+            <!-- Section 7 -->
+            <div class="section">
+                <div class="emoji"><i class="fas fa-chart-line"></i></div>
+                <h2><span>Business</span> Growth Financing</h2>
+                        <p>We provide businesses with the capital they need to expand, hire new talent, and seize growth opportunities that will drive success.</p>
+                    </div>
+        
+               <!-- Section 6 -->
+               <div class="section">
+                <div class="emoji"><i class="fas fa-user-tie"></i>
+                </div>
+                <h2><span>Personal</span> Loan Solutions</h2>
+                <p>Whether it's for a home renovation, education, or emergencies, our personal loans are designed to give you peace of mind and support when you need it most.</p>
+        </div>
+        
+        
+        </div>
+        
+        </div>
+      
+      
+      <style>
+      .contain{
+          width: 85%;
+          max-width: 1400px;
+          margin: auto;
+          padding: 60px 0;
+      }
+      
+      .grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 50px;
+      }
+      
+      .section {
+         
+          padding: 30px;
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(204, 117, 117, 0.153);
+          text-align: center;
+          position: relative;
+      }
+      
+      .section h2 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #222;
+      }
+      
+      .section h2 span {
+          color: #9d0101; /* Blue accent */
+      }
+      
+      .section p {
+          font-size: 14px;
+          color: #555;
+          margin-bottom: 20px;
+      }
+      
+      .icons {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+      }
+      
+      .icons i {
+          font-size: 24px;
+          color: #007bff;
+      }
+      
+      .emoji {
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 30px;
+          background: #396280;
+          padding: 10px;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(11, 10, 10, 0.67);
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      
+      /* Responsive */
+      @media (max-width: 1024px) {
+          .grid {
+              grid-template-columns: repeat(2, 1fr);
+          }
+      }
+      
+      @media (max-width: 768px) {
+          .grid {
+              grid-template-columns: 1fr;
+          }
+      
+          .section {
+              padding: 15px;
+          }
+      
+          .section h2 {
+              font-size: 21px;
+          }
+      
+          .section p {
+              font-size: 18px;
+          }
+      
+          .emoji {
+              font-size: 24px;
+              width: 40px;
+              height: 40px;
+          }
+      }
+      
+      </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        /* --- Global Resets (Optional) --- */
+    
+    
+        /* --- ad-card Section --- */
+        .ad-card {
+          position: relative;
+    
+          padding: 1.5rem; /* Default padding for small screens */
+        }
+    
+        /* Medium screens (min-width: 768px) */
+        @media (min-width: 768px) {
+          .ad-card {
+            padding: 6vh;
+          }
+        }
+    
+        /* Large screens (min-width: 1024px) */
+        @media (min-width: 1024px) {
+          .ad-card {
+            padding: 4vh;
+          }
+        }
+    
+        /* --- Top Box --- */
+        .top-box {
+          border:rgb(182, 205, 238) solid 3px;
+         
+          max-width: 100vh; 
+          margin: 0 auto;
+          text-align: center;
+          background-color:  #396280;
+          padding: 5vh;
+          padding-bottom:4vh; /* Extra bottom padding for overlap (pb-32 => 8rem) */
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.258);
+          z-index: 10;
+          margin-bottom: 4rem; /* Space before the image container starts */
+        }
+    
+        @media (min-width: 768px) {
+          .top-box {
+            padding: 7vh;
+            padding-top: 2vh;
+          }
+        }
+    
+        .top-box h3 {
+      
+         
+          text-transform: uppercase;
+          color: #000000; /* Gray-400 */
+          margin-bottom: 60vh;
+        }
+    
+        .top-box h2 {
+          font-weight: 600;
+          color: #dcdcdc;
+          margin-bottom: 2vh;
+        }
+    
+        @media (min-width: 768px) {
+          .top-box h2 {
+          font-size: 30px;
+          
+          }
+        }
+    
+        .top-box p {
+          font-size: 1rem; /* text-base */
+          color: #e5e7eb; /* Gray-200 */
+          margin-bottom: 1rem;
+        }
+    
+        .top-box button {
+          padding: 0.75rem 1.5rem;
+          background-color: #396280; /* Blue-600 */
+          color: #fff;
+          font-weight: 600;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+    
+        .top-box button:hover {
+          background-color: #1e40af; /* Blue-700 */
+        }
+    
+        /* --- Image Container (Overlaps Top Box) --- */
+        .image-container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin-top: -6rem; /* Negative margin to overlap the top box */
+          z-index: 20;
+        }
+    
+        /* Increase overlap on larger screens if you like */
+        @media (min-width: 768px) {
+          .image-container {
+            margin-top: -8rem; /* More overlap on medium+ screens */
+          }
+        }
+    
+        .image-container img {
+          border:rgb(182, 205, 238) solid 3px;
+          width: 80%; /* 2/3 of the container width */
+          height: 22vh;
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+          object-fit: cover;
+        }
+    
+        /* --- Bottom Box --- */
+        .bottom-box {
+          position: relative;
+          max-width: 55vh; /* ~ Tailwind's max-w-3xl */
+          margin: 0 auto;
+          text-align: center;
+          background-color:  #396280; /* Black background */
+          padding: 3vh;
+          padding-top: 5vh; /* For spacing above content */
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+          margin-top: -1.5rem; /* Overlap the image a bit */
+        }
+    
+        @media (min-width: 768px) {
+          .bottom-box {
+            padding: 2vh;
+            padding-top: 4vh;
+          }
+        }
+    
+        .bottom-box h4 {
+          font-size: 0.75rem; /* text-xs */
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #9ca3af; /* Gray-400 */
+          margin-bottom: 0.5rem;
+        }
+    
+        .bottom-box p {
+          font-size: 1rem;
+          color: #e5e7eb; /* Gray-200 */
+        }
+    
+    
+    
+        button {
+          margin-top: 2vh;
+          padding: 1.9vh 1.5vh;
+          background-color:  #ffffff; /* Blue-600 */
+          color:  #396280;
+          font-weight: 600;
+          border-radius: 2px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+    
+    
+      
+      /* Flex container that wraps and centers items */
+      .containing{
+     
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center items in each row */
+        gap: 5px; /* Gap between boxes */
+      }
+    
+      /* Each box: default for 3 columns */
+      .boxs {
+     
+   
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2em;
+        /* 
+           Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+           from 100% then divide by 3. 
+        */
+        flex: 1 1 calc((100% - 20px) / 4);
+        max-width: calc((100% - 20px) / 3);
+      }
+    
+      /* Tablet view: 2 columns */
+      @media (max-width: 768px) {
+        .boxs{
+          flex: 1 1 calc((100% - 50px) / 3);
+          max-width: calc((100% - 10px) / 1);
+        }
+      }
+    
+      /* Mobile view: 1 column */
+      @media (max-width: 480px) {
+        .boxs{
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+
+
+    
+    
+    
+    
+    <div class="containing">
+      
+        <!-- Ad Card Section -->
+        <section class="boxs">
+          <!-- Top Box -->
+          <div class="top-box">
+         
+            <h2>Professional Tree Felling & Care</h2>
+    
+          </div>
+      
+          <!-- Image (Overlaps the Top Box) -->
+          <div class="image-container">
+            <img
+              src="transport1.jpg"
+              alt="T"
+            >
+          </div>
+      
+          <!-- Bottom Box -->
+          <div class="bottom-box">
+            <h4>Our Mission</h4>
+            <p>We provide expert tree felling and maintenance services, ensuring your property stays safe and visually appealing.</p>
+                <button>Expert Tree Care</button>
+    
+          </div>
+        </section>
+        <!-- End of Ad Card Section -->
+        <section class="boxs">
+          <!-- Top Box -->
+          <div class="top-box">
+         
+            <h2>Durable & Custom Wendy Houses</h2>
+    
+          </div>
+      
+          <!-- Image (Overlaps the Top Box) -->
+          <div class="image-container">
+            <img
+              src="transport2.jpg"
+              alt="T"
+            >
+          </div>
+      
+          <!-- Bottom Box -->
+          <div class="bottom-box">
+            <h4>Our Mission</h4>
+            <p>We construct high-quality Wendy houses designed for relaxation, workspaces, storage,schools and more.</p>
+                <button>Modern Designs</button>
+    
+          </div>
+        </section>
+    
+          <!-- Ad Card Section -->
+          <section class="boxs">
+            <!-- Top Box -->
+            <div class="top-box">
+           
+              <h2>Highly Safe & Efficient Stump Removal</h2>
+          
+            </div>
+          
+            <!-- Image (Overlaps the Top Box) -->
+            <div class="image-container">
+              <img
+                src="transport4.jpg"
+                alt="T">
+            </div>
+          
+            <!-- Bottom Box -->
+            <div class="bottom-box">
+              <h4>Our Mission</h4>
+              <p>We eliminate unsightly and hazardous tree stumps, restoring your landscape to a clean and safe condition.</p>
+                 <button>Remove Stumps</button>
+          
+            </div>
+          </section>
+          <!-- End of Ad Card Section -->
+
+    <section class="boxs">
+            <!-- Top Box -->
+            <div class="top-box">
+           
+              <h2>Eco-Friendly Waste & Bush Clearing</h2>
+      
+            </div>
+        
+            <!-- Image (Overlaps the Top Box) -->
+            <div class="image-container">
+              <img
+                src="transport3.jpg"
+                alt="T">
+            </div>
+        
+            <!-- Bottom Box -->
+            <div class="bottom-box">
+              <h4>Our Mission</h4>
+              <p>We provide responsible bush clearing and waste disposal to keep your surroundings clean and environmentally friendly.</p>
+                <button>Eco Clearance</button>
+      
+            </div>
+          </section>
+
+    </div>
+  
+
+  <div class="lining">
+    <div class="marquee-container">
+        <div class="marquee">
+            Tree Trimming • Tree Removal • Hedge Trimming • Hedge Trimming • Log Cabins •
+        </div>
+    </div>
+  </div>
+</br>
+
+<script>
+  // Modal functions
+  function openModal(img) {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalImg").src = img.src;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+
+
+
+
+
+
+
+
+<style>
+    footer {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #396280;
+      color: #fff;
+      padding: 10px 0;
+    }
+    
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+  
+    .footer-section {
+      flex: 1;
+      margin: 0 10px;
+      padding: 5px;
+    }
+    
+    .lined {
+      font-size: 19px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+    
+    .lined::after {
+      content: "";
+      display: block;
+      height: 4px;
+      background-color: #5884a3;
+      width: 6ch;
+      margin-top: 8px;
+    }
+    
+    .footer-section ul {
+      font-size:13px;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-section li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: #00bcd4;
+    }
+    </style>
+  
+  
+  
+  
+  
+  
+  
+  <p id="location"></p>
+  <p id="footer"></p>
+  
+  
+  
+    
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4 class="lined">Links</h4>
+              <ul>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="transport.html">Schedule Transport</a></li>
+                 
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4 class="lined">Contact</h4>
+              <ul>
+                  
+                  <li>Email</li>
+                  <li>Whatsapp</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4 class="lined">Services</h4>
+              <ul>
+                <li><a href="#footer">Furniture Moving</a></li>
+                <li><a href="#footer">Rubble</a></li>
+                <li><a href="#footer">Rubbish disposal</a></li>
+                <li><a href="#footer">Bush Cuts disposal</a></li>
+                <li><a href="#footer">Reach Truck</a></li>
+                <li><a href="transport.html" style="color: #d0dfed;font-size: 17px;">Schedule Transport</a></li>
+              </ul>
+          </div>
+
+      </div>
+      <div class="location" align="center">
+      <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d330922.53538188385!2d18.25249905156248!3d-33.91886184340559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc676d0409a9c5%3A0xf8b56e35f61b1b57!2sCape%20Town!5e0!3m2!1sen!2sza!4v1710075692893" 
+  width="95%" 
+  height="280" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+      <p align="center" style="font-size:12px; padding: 10px;"> &copy; 2025 TM Logistics & Construction. All Rights Reserved.
+         Powered by <a href="#footer" style="color: #d0cdcd; font-size: 10px;">Lucas </a></p>
+    </footer>
+  
+  <p id="footer"></p>
+</body>
+
+<!--Contact-Widgets-->
+<div class="fixed-widgets">
+    <a href="https://wa.me/27684497931" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+ 
+</div>
+<!--Contact-Widgets-->
+
+
+
+
+
+</html>
+
+
+
+
+<style>
+.lining {
+  margin: 0;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: #396280;
+  padding: 10px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee {
+  display: inline-block;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+      transform: translateX(80%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+
+</style>
