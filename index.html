@@ -17,7 +17,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <img src="Tmlogo.png" alt="TM-logo" style="filter: none; ">
+        <img src="1000015408-removebg-preview.png"  alt="TM-logo" style="filter: none;width:8vh;height:10vh; ">
         <ul>          
             <li><a href="transport.html"><i class="fas fa-shipping-fast"  style="color: #deeaf2;"></i> Transport</a></li>
             <li><a href="#services"><i class="fas fa-clone" style="color:  #deeaf2;"></i> Services</a></li>
@@ -542,72 +542,108 @@
 
 
 
+<div class="bg-part">
 
+    <div class="contain">
 
-      <div class="contain">
-
-        <div class="grid">
-        
-            <!-- About Us Section -->
-            <div  class="section">
-                <div class="emoji"> <i class="fas fa-hand-holding-usd"></i>
-                </div>
-                <h2><span>Smart</span> Loans for Your Financial Freedom</h2>
-                        <p>Our flexible loan options allow you to manage your finances better and unlock the freedom to live your life on your terms.</p>
-        </div>
-        
-           <style>
-            .emoji{
-                color: #f2dfdf; 
-            }
-           </style>
-        
-            <!-- Section 5 -->
-            <div class="section">
-                <div class="emoji"><i class="fas fa-calculator"></i>
-                </div>
-                <h2><span>Expert</span> Financial Planning Services</h2>
-                <p>Work with our expert advisors to create a financial plan that aligns with your goals, whether for retirement, growth, or saving.</p>
-        </div>
-        
-            <!-- Section 7 -->
-            <div class="section">
-                <div class="emoji"><i class="fas fa-chart-line"></i></div>
-                <h2><span>Business</span> Growth Financing</h2>
-                        <p>We provide businesses with the capital they need to expand, hire new talent, and seize growth opportunities that will drive success.</p>
-                    </div>
-        
-               <!-- Section 6 -->
-               <div class="section">
-                <div class="emoji"><i class="fas fa-user-tie"></i>
-                </div>
-                <h2><span>Personal</span> Loan Solutions</h2>
-                <p>Whether it's for a home renovation, education, or emergencies, our personal loans are designed to give you peace of mind and support when you need it most.</p>
-        </div>
-        
-        
-        </div>
-        
-        </div>
+      <div class="grid">
       
+          <!-- Tree Felling Section -->
+          <div class="section">
+              <div class="emoji"><i class="fas fa-tree"></i></div>
+              <h2><span>Safe & Efficient</span> Tree Felling</h2>
+              <p>Our skilled team removes trees safely and professionally, whether it's for safety, aesthetics, or land clearing. No mess, no damage—just expert service.</p>
+          </div>
+      
+          <style>
+              .emoji {
+                  color: #9cb2c1;
+              }
+          </style>
+      
+          <!-- Wendy House Construction -->
+          <div class="section">
+              <div class="emoji"><i class="fas fa-home"></i></div>
+              <h2><span>Quality</span> Wendy House Construction</h2>
+              <p>Built to last, our Wendy houses provide the perfect solution for storage, relaxation spaces, home offices, or even classrooms.</p>
+          </div>
+      
+          <!-- Tree Pruning & Maintenance -->
+          <div class="section">
+              <div class="emoji"><i class="fas fa-seedling"></i></div>
+              <h2><span>Expert</span> Tree Pruning & Care</h2>
+              <p>We keep your trees healthy and well-shaped with professional trimming, pruning, and maintenance services to enhance their beauty and longevity.</p>
+          </div>
+      
+          <!-- Stump Removal Section -->
+          <div class="section">
+              <div class="emoji"><i class="fas fa-trash-alt"></i></div>
+              <h2><span>Fast & Reliable</span> Stump Removal</h2>
+              <p>Clear out unwanted stumps quickly and efficiently. Our removal services restore your landscape and prevent regrowth or pest issues.</p>
+          </div>
+      
+      </div>
+  
+  </div>
+      
+
+  </div>
+
+
+
+
+  
+    <style>
+  .bg-part{
+
+
+      position: relative; /* Needed for my overlay */
+      background-image: url(tree1.jpeg) ;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center center;
+      font-family: 'Times New Roman';
+      
+      margin: 0;
+      background-attachment: fixed;
+    
+      overflow: hidden; 
+    }
+    
+    
+    .bg-part::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.219); 
+      z-index: 1; 
+    }
+</style>    
       
       <style>
+
+     
+        
       .contain{
           width: 85%;
           max-width: 1400px;
           margin: auto;
-          padding: 60px 0;
+          padding: 70px 0;
+          
       }
       
       .grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 50px;
+          gap: 60px;
       }
       
       .section {
-         
-          padding: 30px;
+         background-color: #ffffff;
+          padding: 40px;
           border-radius: 2px;
           box-shadow: 0 4px 8px rgba(204, 117, 117, 0.153);
           text-align: center;
@@ -616,17 +652,17 @@
       
       .section h2 {
           font-size: 20px;
-          margin-bottom: 10px;
+          margin-top:40px;
           color: #222;
       }
       
       .section h2 span {
-          color: #9d0101; /* Blue accent */
+          color: #396280; /* Blue accent */
       }
       
       .section p {
           font-size: 14px;
-          color: #555;
+          color:#26323ad6;
           margin-bottom: 20px;
       }
       
@@ -638,7 +674,7 @@
       }
       
       .icons i {
-          font-size: 24px;
+          font-size: 10px;
           color: #007bff;
       }
       
@@ -647,13 +683,13 @@
           top: -25px;
           left: 50%;
           transform: translateX(-50%);
-          font-size: 30px;
+          
           background: #396280;
-          padding: 10px;
+          padding: 30px;
           border-radius: 50%;
           box-shadow: 0 4px 8px rgba(11, 10, 10, 0.67);
-          width: 50px;
-          height: 50px;
+          width: 65px;
+          height: 65px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -941,7 +977,7 @@
           <!-- Image (Overlaps the Top Box) -->
           <div class="image-container">
             <img
-              src="transport1.jpg"
+              src="felling.jpg"
               alt="T"
             >
           </div>
@@ -966,7 +1002,7 @@
           <!-- Image (Overlaps the Top Box) -->
           <div class="image-container">
             <img
-              src="transport2.jpg"
+              src="Wendy.jpg"
               alt="T"
             >
           </div>
@@ -992,7 +1028,7 @@
             <!-- Image (Overlaps the Top Box) -->
             <div class="image-container">
               <img
-                src="transport4.jpg"
+                src="Stump.jpg"
                 alt="T">
             </div>
           
@@ -1017,7 +1053,7 @@
             <!-- Image (Overlaps the Top Box) -->
             <div class="image-container">
               <img
-                src="transport3.jpg"
+                src="space.jpg"
                 alt="T">
             </div>
         
@@ -1138,7 +1174,7 @@
               <h4 class="lined">Links</h4>
               <ul>
                   <li><a href="#services">Services</a></li>
-                  <li><a href="transport.html">Schedule Transport</a></li>
+                  <li><a href="transport.html">Book Us</a></li>
                  
               </ul>
           </div>
@@ -1174,7 +1210,7 @@
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 </div>
-      <p align="center" style="font-size:12px; padding: 10px;"> &copy; 2025 TM Logistics & Construction. All Rights Reserved.
+      <p align="center" style="font-size:12px; padding: 10px;"> &copy; 2025 Brian's Tree Care & Cabins. All Rights Reserved.
          Powered by <a href="#footer" style="color: #d0cdcd; font-size: 10px;">Lucas </a></p>
     </footer>
   
