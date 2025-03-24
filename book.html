@@ -476,45 +476,48 @@
     <div class="form-container">
         <h2><i class="fas fa-tree" style="color: #2e7d32;"></i> Service Request Form</h2>
         <form id="treeServiceForm">
-            <div class="form-group name-group">
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                <input type="text" id="surname" name="surname" placeholder="Surname" required>
-            </div>
+        <form id="treeServiceForm" action="https://formsubmit.co/mkohlakalilucas7@gmail.com" method="POST">
+    <div class="form-group name-group">
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+    </div>
 
-            <div class="form-group">
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-            </div>
+    <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    </div>
 
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email Address (Optional)">
-            </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email Address (Optional)">
+    </div>
 
-  
-  
-            <div class="form-group">
-                <select id="serviceType" name="serviceType" required>
-                    <option value="">Select a Service</option>
-                    <option value="treeFelling">Tree Felling & Removal</option>
-                    <option value="treePruning">Tree Pruning & Maintenance</option>
-                    <option value="stumpRemoval">Stump Grinding & Removal</option>
-                    <option value="CabinConstruction">Cabin Construction</option>
-                    <option value="HedgeTrimming">Hedge Trimming</option>
-                    <option value="TreeTrimming">Tree Trimming</option>
-                </select>
-            </div>
+    <div class="form-group">
+        <select id="serviceType" name="serviceType" required>
+            <option value="">Select a Service</option>
+            <option value="treeFelling">Tree Felling & Removal</option>
+            <option value="treePruning">Tree Pruning & Maintenance</option>
+            <option value="stumpRemoval">Stump Grinding & Removal</option>
+            <option value="CabinConstruction">Cabin Construction</option>
+            <option value="HedgeTrimming">Hedge Trimming</option>
+            <option value="TreeTrimming">Tree Trimming</option>
+        </select>
+    </div>
 
-            <div class="form-group">
-                <input type="text" id="serviceLocation" name="serviceLocation" placeholder="Service Location (Address)" required>
-            </div>
+    <div class="form-group">
+        <input type="text" id="serviceLocation" name="serviceLocation" placeholder="Service Location (Address)" required>
+    </div>
 
-            <div class="form-group">
-                <textarea id="additionalInstructions" name="additionalInstructions" rows="3" placeholder="Additional Instructions (Optional)"></textarea>
-            </div>
+    <div class="form-group">
+        <textarea id="additionalInstructions" name="additionalInstructions" rows="3" placeholder="Additional Instructions (Optional)"></textarea>
+    </div>
 
-            <button type="submit" class="btn-submit">
-                <i class="fas fa-paper-plane"></i> Submit Request
-            </button>
-        </form>
+    <!-- Prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="btn-submit">
+        <i class="fas fa-paper-plane"></i> Submit Request
+    </button>
+</form>
+
     </div>
 
 
