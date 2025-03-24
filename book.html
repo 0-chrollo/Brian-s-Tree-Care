@@ -478,21 +478,22 @@
 
         
         <form id="treeServiceForm" action="https://formsubmit.co/mkohlakalilucas7@gmail.com" method="POST">
+    <<form action="https://formsubmit.co/mkohlakalilucas7@gmail.com" method="POST">
     <div class="form-group name-group">
-        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="surname" placeholder="Surname" required>
     </div>
 
     <div class="form-group">
-        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
     </div>
 
     <div class="form-group">
-        <input type="email" id="email" name="email" placeholder="Email Address (Optional)">
+        <input type="email" name="email" placeholder="Email Address" required>
     </div>
 
     <div class="form-group">
-        <select id="serviceType" name="serviceType" required>
+        <select name="serviceType" required>
             <option value="">Select a Service</option>
             <option value="treeFelling">Tree Felling & Removal</option>
             <option value="treePruning">Tree Pruning & Maintenance</option>
@@ -504,20 +505,24 @@
     </div>
 
     <div class="form-group">
-        <input type="text" id="serviceLocation" name="serviceLocation" placeholder="Service Location (Address)" required>
+        <input type="text" name="serviceLocation" placeholder="Service Location (Address)" required>
     </div>
 
     <div class="form-group">
-        <textarea id="additionalInstructions" name="additionalInstructions" rows="3" placeholder="Additional Instructions (Optional)"></textarea>
+        <textarea name="additionalInstructions" rows="3" placeholder="Additional Instructions (Optional)"></textarea>
     </div>
 
     <!-- Prevent spam -->
     <input type="hidden" name="_captcha" value="false">
 
+    <!-- Redirect to a thank-you page after submission (optional) -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
     <button type="submit" class="btn-submit">
         <i class="fas fa-paper-plane"></i> Submit Request
     </button>
 </form>
+
 
     </div>
 
